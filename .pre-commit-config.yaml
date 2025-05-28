@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        require_serial: true
+        args: [
+          "-rn",  # Wyświetl tylko komunikaty
+          "-sn",  # Nie wyświetlaj wyniku punktowego
+          "--rcfile=.pylintrc"  # Ścieżka do pliku konfiguracyjnego pylint
+        ]
+
